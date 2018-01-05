@@ -1,0 +1,15 @@
+package com.service;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class App {
+
+	public static void main(String[] args) {
+		//从类路径这里找这个xml文件
+		ApplicationContext ac=new ClassPathXmlApplicationContext("applicationContext.xml");
+
+
+	}
+
+}

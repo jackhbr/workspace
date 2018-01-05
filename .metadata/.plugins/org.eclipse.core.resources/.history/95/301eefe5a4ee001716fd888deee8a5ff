@@ -1,0 +1,35 @@
+package com;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class Serverajax extends HttpServlet{
+
+	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		 String username = req.getParameter("username");
+		 username = new String(username.getBytes("ISO-8859-1"),"utf-8");
+		
+		 
+		 for (String s : names)  
+	        {  
+	            if(s.equals(username))  
+	            {  
+	                resp.getWriter().write("<font color='green'>用户名存在且正确</font>");  
+	                return;  
+	            }  
+	              
+	        }  
+	        resp.getWriter().write("<font color='red'>sorry，the name is not exist</font>");  
+	        resp.getWriter().flush(); 
+	}
+	
+
+	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	
+	}
+
+}

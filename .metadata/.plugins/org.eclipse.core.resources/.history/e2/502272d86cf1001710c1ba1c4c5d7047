@@ -1,0 +1,18 @@
+package com;
+
+public class GreetingService {
+	public String greeting ;
+
+	public String getGreeting() {
+		return greeting;
+	}
+
+	public void setGreeting(String greeting) {
+		this.greeting = greeting;
+	}
+	
+	public void sayGreeting(){
+		System.out.println(greeting);
+	}
+
+}
